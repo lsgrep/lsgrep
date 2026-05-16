@@ -1,3 +1,7 @@
-ML and backend engineer. I build tools at the intersection of language models and infrastructure.
+ML and backend engineer.
 
-Currently working on [overlay.one](https://overlay.one), [segue.app](https://segue.app), and [hour.app](https://hour.app).
+**Projects**
+
+- [overlay.one](https://overlay.one) — AI browser extension with multi-model support (Claude, GPT-4, Gemini)
+- [segue.app](https://segue.app) — vocabulary learning with flashcards and quizzes
+- [hour.app](https://hour.app) — appointment scheduling with Google Calendar sync
