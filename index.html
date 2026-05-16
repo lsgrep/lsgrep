@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yusup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #0e0e0e;
+      --fg: #ede9e1;
+      --muted: #6b6660;
+      --accent: #c8a96e;
+      --border: #222;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1.7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 48px 24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 560px;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: rise 0.6s ease forwards;
+      animation-delay: 0.1s;
+    }
+
+    @keyframes rise {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6vw, 3.6rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--fg);
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .role {
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+
+    .bio {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+      margin-bottom: 48px;
+      max-width: 440px;
+    }
+
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .projects {
+      margin-bottom: 48px;
+    }
+
+    .project {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s ease;
+    }
+
+    .project:hover .project-name {
+      color: var(--accent);
+    }
+
+    .project-name {
+      color: var(--fg);
+      font-size: 13px;
+      font-weight: 400;
+      transition: color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .project-desc {
+      color: var(--muted);
+      font-size: 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .link {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      position: relative;
+      transition: color 0.2s ease;
+    }
+
+    .link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--accent);
+      transition: width 0.2s ease;
+    }
+
+    .link:hover {
+      color: var(--fg);
+    }
+
+    .link:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1 class="name">Yusup</h1>
+    <p class="role">ML &amp; Backend Engineer</p>
+
+    <p class="bio">
+      I build systems at the intersection of language models and backend infrastructure.
+      Most of my work involves making AI useful in practice — reliable, fast, and integrated
+      into real workflows.
+    </p>
+
+    <div class="projects">
+      <div class="section-label">Projects</div>
+      <a class="project" href="https://overlay.one" target="_blank" rel="noopener">
+        <span class="project-name">overlay.one</span>
+        <span class="project-desc">AI-powered browsing assistant with multi-model LLM support</span>
+      </a>
+      <a class="project" href="https://segue.app" target="_blank" rel="noopener">
+        <span class="project-name">segue.app</span>
+      </a>
+      <a class="project" href="https://hour.app" target="_blank" rel="noopener">
+        <span class="project-name">hour.app</span>
+      </a>
+    </div>
+
+    <nav class="links">
+      <a class="link" href="https://github.com/lsgrep" target="_blank" rel="noopener">github</a>
+    </nav>
+  </main>
+</body>
+</html>
